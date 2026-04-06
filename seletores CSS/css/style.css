@@ -1,0 +1,103 @@
+*{
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif
+}
+body{
+  margin:0;
+  background:#f1f5f9;
+  color:#1e293b
+}
+.topo{
+  background:#ff163d;
+  color:#fff;
+  padding:18px 0
+}
+.topo-conteudo{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  gap:20px;
+  padding:0 20px
+}
+.logo{
+  width:60px;
+  height:60px;
+  background:#fff;
+  border-radius:6px
+}
+.container{
+  max-width:1100px;
+  margin:30px auto;
+  padding:0 20px
+}
+.card{
+  background:#fff;
+  border-radius:10px;
+  padding:22px;
+  margin-bottom:24px;
+  box-shadow:0 8px 20px rgba(0,0,0,.05)
+}
+.card h2{
+  margin-top:0;
+  color:#2563eb
+}
+.info{
+  background:#eef6ff;
+  padding:12px;
+  border-left:4px solid #2563eb;
+  border-radius:6px;
+  margin-bottom:12px
+}
+.info.laranja{
+  background:#fff7ed;
+  border-left-color:#f59e0b
+}
+.info.forte{
+  border-left-width:6px
+}
+pre{
+  background:#0f172a;
+  color:#e5e7eb;
+  padding:14px;
+  border-radius:8px;
+  overflow:auto
+}
+.duas-colunas{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px
+}
+.menu-filho > li{
+  background:#eef2ff;
+  padding:6px;
+  margin-bottom:6px
+}
+.botao{
+  display:inline-block;
+  background:#2563eb;
+  color:#fff;
+  padding:8px 14px;
+  border-radius:6px;
+  text-decoration:none
+}
+.botao:hover{
+  background:#1d4ed8
+}
+.zebra li:nth-child(even){
+  background:#e0f2fe
+}
+.aviso::before{
+  content:"⚠ ";
+  color:#f59e0b
+}
+.rodape{
+  text-align:center;
+  padding:30px 0;
+  color:#64748b
+}
+@media(max-width:800px){
+  .duas-colunas{
+    grid-template-columns:1fr
+  }
+}

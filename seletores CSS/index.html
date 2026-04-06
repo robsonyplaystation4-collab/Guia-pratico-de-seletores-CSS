@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Robson seletores CSS</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topo">
+  <div class="topo-conteudo">
+    <img src="img/logo.png" alt="Logo" class="logo">
+    <div>
+      <h1>Guia prático de seletores CSS</h1>
+      <p>Exemplos visuais para aula introdutória de seletores</p>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+<section class="card">
+<h2>1. O problema inicial</h2>
+<p>Em CSS, o seletor responde à pergunta: <strong>em quais elementos esta regra será aplicada?</strong></p>
+</section>
+
+<section class="card">
+<h2>2. Seletor universal e seletor por tipo</h2>
+<div class="info">
+Este parágrafo recebe estilo do seletor por tipo <code>p</code>.
+</div>
+<pre><code>* {
+  box-sizing: border-box;
+}
+
+p {
+  color: #334155;
+}</code></pre>
+</section>
+
+<section class="card">
+<h2>3. Classe e ID</h2>
+<div class="duas-colunas">
+<div>
+<div class="info azul">
+Este parágrafo usa a classe <strong>.destaque</strong>.
+</div>
+<pre><code>.destaque {
+  background: #eef6ff;
+  border-left: 4px solid #2563eb;
+}</code></pre>
+</div>
+
+<div>
+<div class="info laranja">
+Este parágrafo usa o ID <strong>#aviso-unico</strong>.
+</div>
+<pre><code>#aviso-unico {
+  color: #b45309;
+  font-style: italic;
+}</code></pre>
+</div>
+</div>
+</section>
+
+<section class="card">
+<h2>4. Combinadores</h2>
+<div class="duas-colunas">
+<div>
+<ul>
+<li>Início</li>
+<li>Contato</li>
+</ul>
+<pre><code>nav a {
+  color: #1d4ed8;
+}</code></pre>
+</div>
+<div>
+<ul class="menu-filho">
+<li>Item A</li>
+<li>Item B
+  <ul>
+    <li>Subitem</li>
+  </ul>
+</li>
+</ul>
+<pre><code>ul.menu-filho > li {
+  background: #eef2ff;
+}</code></pre>
+</div>
+</div>
+</section>
+
+<section class="card">
+<h2>5. Pseudo-classes</h2>
+<div class="duas-colunas">
+<div>
+<a href="#" class="botao">Passe o mouse aqui</a>
+<pre><code>.botao:hover {
+  background: #1d4ed8;
+}</code></pre>
+</div>
+<div>
+<ul class="zebra">
+<li>Elemento 1</li>
+<li>Elemento 2</li>
+<li>Elemento 3</li>
+<li>Elemento 4</li>
+</ul>
+<pre><code>.zebra li:nth-child(2n) {
+  background: #e0f2fe;
+}</code></pre>
+</div>
+</div>
+</section>
+
+<section class="card">
+<h2>6. Pseudo-elementos</h2>
+<div class="info aviso">Este texto recebe conteúdo antes e depois.</div>
+<pre><code>.aviso::before {
+  content: ">> ";
+}
+
+.aviso::after {
+  content: " <<";
+}</code></pre>
+</section>
+
+<section class="card">
+<h2>7. Conflito entre regras e especificidade</h2>
+<div class="info azul forte">
+Este texto recebe seletor por tipo, por classe e por ID.
+</div>
+<pre><code>p { color: #334155; }
+.destaque { color: #0ea5e9; }
+#principal { color: #991b1b; }</code></pre>
+<p><em>O ID vence por ser mais específico.</em></p>
+</section>
+
+<section class="card">
+<h2>8. Síntese</h2>
+<ul>
+<li>Seletores escolhem elementos</li>
+<li>Classe é reutilizável</li>
+<li>ID deve ser único</li>
+<li>Especificidade resolve conflitos</li>
+</ul>
+</section>
+
+</main>
+
+<footer class="rodape">
+ROBSON — Seletores CSS
+</footer>
+
+</body>
+</html>
